@@ -1,0 +1,1692 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Apple Park — Ремонт техники Apple в Витебске</title>
+    <meta
+      name="description"
+      content="Профессиональный ремонт iPhone, iPad, MacBook в Витебске. Оригинальные запчасти, бесплатная диагностика, гарантия до 1 года, выезд мастера."
+    />
+    <meta
+      name="keywords"
+      content="ремонт айфон, ремонт macbook, сервис apple, замена экрана, мастер по apple"
+    />
+    <meta name="author" content="Apple Service Pro" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://appleservicepro.ru" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+
+    <!-- Шрифты и стили -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          padding: 0 16px;
+        }
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        color: #000000;
+      }
+
+      @media (max-width: 640px) {
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        letter-spacing: -0.01em;
+        color: #000000;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .section-title span {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 4px 12px;
+        border-radius: 30px;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 28px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border-radius: 40px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        gap: 8px;
+      }
+
+      @media (max-width: 640px) {
+        .btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+        .hero .btn {
+          width: 100%;
+          margin-left: 0 !important;
+          margin-bottom: 12px;
+        }
+      }
+
+      .btn-primary {
+        background: #000000;
+        color: #ffffff;
+        border: 1px solid #000000;
+      }
+      .btn-primary:hover {
+        background: #333333;
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        background: transparent;
+        color: #000000;
+        border: 1px solid #000000;
+      }
+      .btn-outline:hover {
+        background: #000000;
+        color: #ffffff;
+      }
+
+      /* ========== ХЕДЕР С БУРГЕРОМ ========== */
+      .header {
+        padding: 20px 0;
+        border-bottom: 1px solid #eaeaea;
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        z-index: 100;
+      }
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+        color: #000;
+      }
+      .logo span {
+        color: #555;
+        font-weight: 500;
+      }
+
+      /* Десктопная навигация */
+      .nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+      .nav a {
+        text-decoration: none;
+        color: #1a1a1a;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav a:hover {
+        color: #666;
+      }
+
+      /* Бургер-кнопка (скрыта на десктопе) */
+      .burger-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 102;
+      }
+      .burger-btn span {
+        width: 100%;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+      }
+      .burger-btn.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+      .burger-btn.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .burger-btn.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+
+      /* Мобильное меню (overlay) */
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 101;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .mobile-menu.open {
+        right: 0;
+      }
+      .mobile-menu a {
+        text-decoration: none;
+        color: #1a1a1a;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+        transition: color 0.2s;
+      }
+      .mobile-menu a:hover {
+        color: #666;
+      }
+      .mobile-menu .mobile-phone {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #000;
+      }
+
+      /* Затемнение фона при открытом меню */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        display: none;
+      }
+      .menu-overlay.active {
+        display: block;
+      }
+
+      .header-phone {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #000;
+      }
+
+      /* Адаптив: показываем бургер, скрываем десктопное меню и телефон */
+      @media (max-width: 768px) {
+        .nav {
+          display: none;
+        }
+        .header-phone {
+          display: none;
+        }
+        .burger-btn {
+          display: flex;
+        }
+        .header-inner {
+          justify-content: space-between;
+        }
+      }
+
+      /* ========== ОСТАЛЬНЫЕ СТИЛИ ========== */
+      .hero {
+        padding: 70px 0 60px;
+        background: #ffffff;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-grid {
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding: 40px 0 30px;
+        }
+        .hero-stats {
+          justify-content: space-between;
+          gap: 15px;
+        }
+        .stat-number {
+          font-size: 1.4rem;
+        }
+        .stat-item div:last-child {
+          font-size: 0.8rem;
+        }
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: #f5f5f5;
+        padding: 5px 12px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .hero-desc {
+        font-size: 1.1rem;
+        color: #444;
+        margin: 20px 0 30px;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .stat-item {
+        text-align: left;
+      }
+      .stat-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000;
+      }
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .devices {
+        padding: 70px 0;
+        background: #ffffff;
+        border-top: 1px solid #efefef;
+      }
+      .devices-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 640px) {
+        .devices {
+          padding: 40px 0;
+        }
+        .devices-grid {
+          gap: 16px;
+        }
+        .device-card {
+          width: calc(50% - 8px);
+          min-width: 140px;
+          padding: 20px 12px;
+        }
+        .device-icon {
+          font-size: 2.5rem;
+        }
+        .device-name {
+          font-size: 1.1rem;
+        }
+      }
+
+      .device-card {
+        text-align: center;
+        width: 200px;
+        padding: 30px 20px;
+        border-radius: 24px;
+        background: #fcfcfc;
+        border: 1px solid #eeeeee;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .device-card:hover {
+        border-color: #000;
+        transform: translateY(-5px);
+      }
+      .device-icon {
+        font-size: 3.2rem;
+        margin-bottom: 16px;
+      }
+      .device-name {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+
+      .benefits {
+        padding: 70px 0;
+        background: #fafafa;
+      }
+
+      @media (max-width: 640px) {
+        .benefits {
+          padding: 40px 0;
+        }
+        .benefits-grid {
+          gap: 16px;
+        }
+        .benefit-card {
+          padding: 20px;
+        }
+        .benefit-icon {
+          font-size: 1.5rem;
+        }
+        .benefit-card h3 {
+          font-size: 1.1rem;
+        }
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .benefit-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 28px;
+        border: 1px solid #ebebeb;
+      }
+      .benefit-icon {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .reviews {
+        padding: 70px 0;
+        background: #ffffff;
+      }
+
+      @media (max-width: 640px) {
+        .reviews {
+          padding: 40px 0;
+        }
+        .reviews-slider {
+          gap: 20px;
+        }
+        .review-card {
+          padding: 20px;
+        }
+        .review-text {
+          font-size: 0.9rem;
+        }
+      }
+
+      .reviews-slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .review-card {
+        background: #f9f9f9;
+        padding: 28px;
+        border-radius: 24px;
+        border: 1px solid #efefef;
+      }
+      .review-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #2c2c2c;
+        margin-bottom: 20px;
+      }
+      .review-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .review-avatar {
+        width: 48px;
+        height: 48px;
+        background: #ddd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        background: #eaeaea;
+        color: #000;
+      }
+      .review-name {
+        font-weight: 700;
+      }
+
+      .seo-text {
+        padding: 50px 0;
+        background: #ffffff;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      @media (max-width: 640px) {
+        .seo-text {
+          padding: 30px 0;
+        }
+        .seo-text p,
+        .seo-text ul {
+          font-size: 0.9rem;
+        }
+      }
+
+      .seo-text p,
+      .seo-text ul {
+        color: #4a4a4a;
+        margin-bottom: 1rem;
+      }
+      .seo-text ul {
+        padding-left: 20px;
+      }
+
+      .promo {
+        background: #000000;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .promo {
+          padding: 40px 0;
+        }
+        .promo h3 {
+          font-size: 1.5rem;
+        }
+        .promo p {
+          font-size: 0.95rem;
+          padding: 0 16px;
+        }
+      }
+
+      .promo h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: white;
+      }
+      .promo .btn-outline-light {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+      .promo .btn-outline-light:hover {
+        background: white;
+        color: black;
+      }
+
+      .callback-section {
+        padding: 70px 0;
+        background: #f4f4f4;
+      }
+
+      @media (max-width: 640px) {
+        .callback-section {
+          padding: 40px 0;
+        }
+        .form-grid {
+          gap: 30px;
+        }
+        .callback-form {
+          padding: 24px;
+        }
+        .input-group input,
+        .input-group textarea {
+          padding: 12px 16px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+      .callback-form {
+        background: white;
+        padding: 40px;
+        border-radius: 32px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      }
+      .input-group {
+        margin-bottom: 20px;
+      }
+      .input-group input,
+      .input-group textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #e2e2e2;
+        border-radius: 60px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: 0.2s;
+      }
+      .input-group textarea {
+        border-radius: 24px;
+        resize: vertical;
+      }
+      .input-group input:focus,
+      .input-group textarea:focus {
+        outline: none;
+        border-color: #000;
+      }
+
+      /* Модальное окно выбора проблем */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        padding: 16px;
+      }
+      .problem-modal {
+        background: white;
+        max-width: 600px;
+        width: 100%;
+        max-height: 80vh;
+        border-radius: 32px;
+        overflow: hidden;
+        animation: modalFadeIn 0.3s ease;
+      }
+
+      @media (max-width: 640px) {
+        .problem-modal {
+          max-height: 85vh;
+          border-radius: 24px;
+        }
+        .modal-header {
+          padding: 18px 20px;
+        }
+        .modal-header h3 {
+          font-size: 1.2rem;
+        }
+        .problems-list {
+          padding: 12px 20px 20px;
+        }
+        .problem-item {
+          padding: 12px 0;
+        }
+        .problem-name {
+          font-size: 0.9rem;
+        }
+        .problem-price {
+          font-size: 0.8rem;
+          padding: 3px 8px;
+        }
+      }
+
+      @keyframes modalFadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .modal-header {
+        padding: 24px 28px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.2s;
+      }
+      .modal-close:hover {
+        color: #000;
+      }
+      .problems-list {
+        padding: 16px 28px 28px;
+        overflow-y: auto;
+        max-height: 60vh;
+      }
+      .problem-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .problem-item:hover {
+        background: #fafafa;
+        margin: 0 -8px;
+        padding: 16px 8px;
+      }
+      .problem-name {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .problem-price {
+        font-weight: 700;
+        color: #000;
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        background: #000000;
+        color: #cccccc;
+        padding: 50px 0 30px;
+      }
+
+      @media (max-width: 640px) {
+        .footer {
+          padding: 40px 0 20px;
+        }
+        .footer-grid {
+          gap: 30px;
+        }
+        .footer-col h4 {
+          margin-bottom: 12px;
+        }
+        .footer-col a,
+        .footer-col p {
+          font-size: 0.85rem;
+        }
+        .footer-bottom {
+          font-size: 0.7rem;
+        }
+        .footer-bottom a {
+          display: inline-block;
+          margin: 5px 0;
+        }
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .footer-col a {
+        display: block;
+        color: #aaa;
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+      }
+      .footer-bottom {
+        border-top: 1px solid #222;
+        padding-top: 30px;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      /* Кастомное уведомление */
+      .custom-notification {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #10b981;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        z-index: 10000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+      }
+
+      .custom-notification.error {
+        background: #ef4444;
+      }
+
+      .custom-notification.show {
+        transform: translateX(0);
+      }
+
+      .custom-notification i {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 640px) {
+        .custom-notification {
+          bottom: 20px;
+          right: 20px;
+          left: 20px;
+          max-width: none;
+          padding: 14px 20px;
+        }
+      }
+
+      .input-group.error input {
+        border-color: #ef4444;
+        background-color: #fef2f2;
+      }
+
+      .input-group.success input {
+        border-color: #10b981;
+        background-color: #f0fdf4;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        #thanksModal > div {
+          margin: 20px;
+          padding: 30px 20px;
+        }
+        #thanksModal h3 {
+          font-size: 1.3rem;
+        }
+        #thanksModal p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">ЭПЛ<span>ПАРК</span></a>
+
+        <!-- Десктопная навигация -->
+        <div class="nav">
+          <a href="#devices">Услуги</a>
+          <a href="#benefits">Преимущества</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+
+        <a href="tel:+375296056352" class="header-phone">+375(29)605-63-52</a>
+
+        <!-- Бургер-кнопка (только для мобилок) -->
+        <button class="burger-btn" id="burgerBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#devices" class="mobile-nav-link">Услуги</a>
+      <a href="#benefits" class="mobile-nav-link">Преимущества</a>
+      <a href="#reviews" class="mobile-nav-link">Отзывы</a>
+      <a href="#contacts" class="mobile-nav-link">Контакты</a>
+      <a href="tel:+375296056352" class="mobile-phone"
+        >📞 +375 (29) 605-63-52</a
+      >
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">Профессиональный ремонт Apple</div>
+          <h1>Ремонт техники Apple <br />в Витебске</h1>
+          <p class="hero-desc">
+            Бесплатная диагностика, оригинальные запчасти, выезд мастера за 0
+            руб. Вернём ваше устройство к жизни за 1–2 часа.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">7+</div>
+              <div>лет опыта</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2000+</div>
+              <div>отремонтировано</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">12 мес</div>
+              <div>гарантии</div>
+            </div>
+          </div>
+          <div
+            style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px"
+          >
+            <a
+              href="#callback"
+              class="btn btn-primary"
+              style="flex: 1; min-width: 160px"
+              >Заказать звонок</a
+            >
+            <a
+              href="#devices"
+              class="btn btn-outline"
+              style="flex: 1; min-width: 160px"
+              >Выбрать устройство</a
+            >
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://i.pinimg.com/1200x/f9/c3/64/f9c36472cbdd3f72a1c4cf0e5441ea16.jpg"
+            alt="Ремонт Apple"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="devices" class="devices">
+      <div class="container">
+        <div class="section-title">
+          <span>Направления</span>
+          <h2>Что ремонтируем</h2>
+        </div>
+        <div class="devices-grid">
+          <div class="device-card" data-device="iPhone">
+            <div class="device-icon"><i class="fab fa-apple"></i></div>
+            <div class="device-name">iPhone</div>
+            <div style="font-size: 13px; margin-top: 8px">
+              от замены стекла до микропайки
+            </div>
+          </div>
+          <div class="device-card" data-device="iPad">
+            <div class="device-icon"><i class="fas fa-tablet-alt"></i></div>
+            <div class="device-name">iPad</div>
+            <div style="font-size: 13px; margin-top: 8px">
+              дисплей, аккумулятор, корпус
+            </div>
+          </div>
+          <div class="device-card" data-device="MacBook">
+            <div class="device-icon"><i class="fas fa-laptop"></i></div>
+            <div class="device-name">MacBook</div>
+            <div style="font-size: 13px; margin-top: 8px">
+              клавиатура, материнская плата
+            </div>
+          </div>
+          <div class="device-card" data-device="AirPods / Watch">
+            <div class="device-icon"><i class="fas fa-headphones"></i></div>
+            <div class="device-name">AirPods / Watch</div>
+            <div style="font-size: 13px; margin-top: 8px">
+              аккумуляторы, ремонт корпуса
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+      <div class="container">
+        <div class="section-title">
+          <span>Почему мы</span>
+          <h2>Ключевые преимущества</h2>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="fas fa-microchip"></i></div>
+            <h3>Оригинальные запчасти</h3>
+            <p>
+              Только сертифицированные комплектующие с гарантией производителя.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3>Бесплатная диагностика</h3>
+            <p>
+              Никакой платы за осмотр. Называем точную стоимость до ремонта.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+            <h3>Выезд мастера 0 руб</h3>
+            <p>
+              Приедем к вам в офис или домой, выполним срочный ремонт на месте.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Гарантия 12 месяцев</h3>
+            <p>Письменная гарантия на все виды работ и компоненты.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+            <h3>Срочный ремонт</h3>
+            <p>Большинство поломок устраняем за 1–2 часа в день обращения.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="fas fa-hand-sparkles"></i></div>
+            <h3>Чистота и порядок</h3>
+            <p>Работаем с антистатикой, соблюдаем строгие стандарты.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="promo">
+      <div class="container">
+        <h3>Акция: защитное стекло в подарок!</h3>
+        <p>
+          При замене экрана или стекла на любом iPhone — установка защитного
+          стекла 9H бесплатно.
+        </p>
+        <br />
+        <a href="#callback" class="btn btn-outline-light"
+          >Записаться на ремонт</a
+        >
+      </div>
+    </div>
+
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="section-title">
+          <span>Клиенты о нас</span>
+          <h2>Честные отзывы</h2>
+        </div>
+        <div class="reviews-slider">
+          <div class="review-card">
+            <div class="review-text">
+              «Ребята сделали невозможное: починили MacBook после залития кофе
+              за 4 часа. Оригинальная клавиатура, цена адекватная. Спасибо!»
+            </div>
+            <div class="review-author">
+              <div class="review-avatar">АК</div>
+              <div>
+                <div class="review-name">Алексей К.</div>
+                <div>MacBook Pro 14</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-text">
+              «Разбил дисплей на iPhone 15 Pro. Заменили за 2 часа, стекло в
+              подарок. Качество сервиса на высоте, буду рекомендовать.»
+            </div>
+            <div class="review-author">
+              <div class="review-avatar">МП</div>
+              <div>
+                <div class="review-name">Мария П.</div>
+                <div>iPhone 15 Pro</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-text">
+              «Отличный сервисный центр! Бесплатно продиагностировали iPad,
+              заменили аккумулятор. Удобно, что есть курьерская доставка. 10/10»
+            </div>
+            <div class="review-author">
+              <div class="review-avatar">ДК</div>
+              <div>
+                <div class="review-name">Дмитрий К.</div>
+                <div>iPad Air</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seo-text">
+      <div class="container">
+        <h2>Ремонт техники Apple в Витебске — профессионально и честно</h2>
+        <p>
+          Наш сервисный центр специализируется исключительно на продукции Apple:
+          iPhone, iPad, MacBook, iMac, Apple Watch. Мы понимаем архитектуру
+          устройств и используем профессиональное оборудование для пайки,
+          диагностики и калибровки.
+        </p>
+        <p>Частые поломки, с которыми мы работаем:</p>
+        <ul>
+          <li>
+            Замена дисплейного модуля и стекла (True Tone восстанавливается);
+          </li>
+          <li>
+            Ремонт после залития — ультразвуковая чистка, восстановление
+            компонентов;
+          </li>
+          <li>Замена аккумулятора на оригинальный;</li>
+          <li>Ремонт системной платы (микропайка).</li>
+        </ul>
+        <p>
+          Предоставляем гарантийный талон на 12 месяцев. Работаем с физ. лицами
+          и компаниями, возможен безналичный расчёт.
+        </p>
+      </div>
+    </div>
+
+    <section id="callback" class="callback-section">
+      <div class="container form-grid">
+        <div>
+          <span
+            style="
+              background: #e9e9e9;
+              padding: 4px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+            "
+          >
+            Связь 24/7
+          </span>
+          <h2 style="margin-top: 15px">Оставьте заявку</h2>
+          <p style="color: #444">
+            Мы перезвоним в ближайшее время, ответим на вопросы и согласуем
+            условия ремонта.
+          </p>
+          <ul style="margin-top: 20px; list-style: none">
+            <li style="margin-bottom: 12px">
+              <i
+                class="fas fa-check-circle"
+                style="margin-right: 12px; color: black"
+              ></i>
+              Бесплатная диагностика
+            </li>
+            <li style="margin-bottom: 12px">
+              <i
+                class="fas fa-check-circle"
+                style="margin-right: 12px; color: black"
+              ></i>
+              Окончательная цена до старта работ
+            </li>
+            <li>
+              <i
+                class="fas fa-check-circle"
+                style="margin-right: 12px; color: black"
+              ></i>
+              Выезд мастера за 0 руб
+            </li>
+          </ul>
+        </div>
+        <div class="callback-form">
+          <form id="mainForm" action="#" method="POST">
+            <div class="input-group">
+              <input
+                type="text"
+                id="formName"
+                name="name"
+                placeholder="Ваше имя"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="tel"
+                id="formPhone"
+                name="phone"
+                placeholder="+375 (___) ___-__-__"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                id="formDevice"
+                name="device"
+                placeholder="Устройство / модель"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                rows="2"
+                id="formMessage"
+                name="message"
+                placeholder="Опишите проблему..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width: 100%; justify-content: center"
+            >
+              Отправить заявку
+            </button>
+            <p
+              style="
+                font-size: 12px;
+                text-align: center;
+                margin-top: 15px;
+                color: #888;
+              "
+            >
+              Нажимая «Отправить», вы соглашаетесь с политикой обработки данных
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>ЭПЛПАРК</h4>
+            <p>
+              Сервисный центр №1 по ремонту Apple в Витебске. Работаем с 2013
+              года.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <a href="tel:+375296056352">+375 (29) 605-63-52</a>
+            <a href="mailto:info@applepro.ru">info@applepro.ru</a>
+            <p>Витебск, проезд Гоголя, д. 9</p>
+            <p>Ежедневно 10:00–20:00</p>
+          </div>
+          <div class="footer-col">
+            <h4>Услуги</h4>
+            <a href="#" data-device="iPhone">Ремонт iPhone</a>
+            <a href="#" data-device="MacBook">Ремонт MacBook</a>
+            <a href="#" data-device="iPad">Ремонт iPad</a>
+            <a href="#" data-device="AirPods / Watch">Ремонт AirPods / Watch</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 ЭПЛПАРК. <strong>ИП Завьялов Р.П.</strong> УНП: 391860252
+            Зарегистрирован Витебским горисполкомом, решение №...<br />
+            <a href="/privacy-policy">Политика конфиденциальности</a> |
+            <a href="/oferta">Договор публичной оферты (Условия заказа)</a>
+          </p>
+          <p style="font-size: 11px; color: #666">
+            Apple, iPhone, MacBook — зарегистрированные товарные знаки Apple
+            Inc.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Модалка "Спасибо" -->
+    <div
+      id="thanksModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+        z-index: 1002;
+      "
+    >
+      <div
+        style="
+          background: white;
+          max-width: 400px;
+          padding: 40px;
+          border-radius: 32px;
+          text-align: center;
+        "
+      >
+        <i
+          class="fas fa-check-circle"
+          style="font-size: 3rem; color: green; margin-bottom: 15px"
+        ></i>
+        <h3>Спасибо!</h3>
+        <p>Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+        <button
+          onclick="closeModal()"
+          class="btn btn-primary"
+          style="margin-top: 20px"
+        >
+          Закрыть
+        </button>
+      </div>
+    </div>
+
+    <!-- Модалка выбора проблем -->
+    <div id="problemModal" class="modal-overlay">
+      <div class="problem-modal">
+        <div class="modal-header">
+          <h3 id="modalDeviceTitle">Выберите проблему</h3>
+          <button class="modal-close" onclick="closeProblemModal()">
+            &times;
+          </button>
+        </div>
+        <div id="problemsListContainer" class="problems-list"></div>
+      </div>
+    </div>
+
+    <script>
+      // ========== БУРГЕР-МЕНЮ ==========
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOverlay = document.getElementById("menuOverlay");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      function openMenu() {
+        mobileMenu.classList.add("open");
+        menuOverlay.classList.add("active");
+        document.body.classList.add("menu-open");
+        burgerBtn.classList.add("active");
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove("open");
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        burgerBtn.classList.remove("active");
+      }
+
+      burgerBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("open")) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      menuOverlay.addEventListener("click", closeMenu);
+
+      // При клике на ссылку в мобильном меню — закрываем меню
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          closeMenu();
+          // Плавная прокрутка к секции
+          const targetId = link.getAttribute("href");
+          if (targetId && targetId !== "#") {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+
+      // ========== ОСТАЛЬНАЯ ЛОГИКА ==========
+      // База данных проблем для каждого устройства
+      const problemsDB = {
+        iPhone: [
+          { name: "Замена экрана (дисплей)", price: "от 120 руб" },
+          { name: "Замена аккумулятора", price: "от 80 руб" },
+          { name: "Замена стекла (только стекло)", price: "от 90 руб" },
+          { name: "Не работает кнопка включения", price: "от 60 руб" },
+          { name: "Не заряжается / разъем", price: "от 50 руб" },
+          { name: "Ремонт после залития", price: "от 150 руб" },
+          { name: "Не работает динамик / микрофон", price: "от 70 руб" },
+        ],
+        iPad: [
+          { name: "Замена экрана", price: "от 180 руб" },
+          { name: "Замена аккумулятора", price: "от 120 руб" },
+          { name: "Не включается", price: "от 100 руб" },
+          { name: "Ремонт после залития", price: "от 200 руб" },
+          { name: "Замена кнопки Home", price: "от 70 руб" },
+        ],
+        MacBook: [
+          { name: "Замена клавиатуры", price: "от 150 руб" },
+          { name: "Замена аккумулятора", price: "от 180 руб" },
+          { name: "Чистка от пыли + термопаста", price: "от 60 руб" },
+          { name: "Ремонт материнской платы", price: "от 250 руб" },
+          { name: "Замена экрана (дисплей)", price: "от 350 руб" },
+          { name: "Не включается / нет питания", price: "от 100 руб" },
+        ],
+        "AirPods / Watch": [
+          { name: "Замена аккумулятора AirPods", price: "от 70 руб" },
+          { name: "Замена аккумулятора Watch", price: "от 90 руб" },
+          { name: "Ремонт корпуса / замена крышки", price: "от 50 руб" },
+          { name: "Не заряжаются", price: "от 60 руб" },
+          { name: "Проблемы со звуком AirPods", price: "от 80 руб" },
+        ],
+      };
+
+      let currentDevice = "";
+
+      function validatePhoneNumber(phone) {
+        const cleaned = phone.replace(/[\s\-\(\)\+]/g, "");
+        const pattern1 = /^80[0-9]{9}$/;
+        const pattern2 = /^375[0-9]{9}$/;
+        const pattern3 = /^29[0-9]{7}$/;
+        const pattern4 = /^33[0-9]{7}$/;
+        const pattern5 = /^44[0-9]{7}$/;
+        const pattern6 = /^25[0-9]{7}$/;
+
+        if (pattern1.test(cleaned))
+          return { valid: true, formatted: "+" + cleaned };
+        if (pattern2.test(cleaned))
+          return { valid: true, formatted: "+" + cleaned };
+        if (pattern3.test(cleaned))
+          return { valid: true, formatted: "+375" + cleaned };
+        if (pattern4.test(cleaned))
+          return { valid: true, formatted: "+375" + cleaned };
+        if (pattern5.test(cleaned))
+          return { valid: true, formatted: "+375" + cleaned };
+        if (pattern6.test(cleaned))
+          return { valid: true, formatted: "+375" + cleaned };
+        return { valid: false, formatted: null };
+      }
+
+      function formatPhoneInput(input) {
+        let value = input.value.replace(/[^\d+]/g, "");
+        if (value.startsWith("8") && value.length <= 11) {
+          value = "+" + value;
+        } else if (value.startsWith("375") && !value.startsWith("+")) {
+          value = "+" + value;
+        } else if (/^[0-9]{9}$/.test(value)) {
+          const firstTwo = value.substring(0, 2);
+          if (["29", "33", "44", "25"].includes(firstTwo)) {
+            value = "+375" + value;
+          }
+        }
+        input.value = value;
+      }
+
+      function showNotification(message, isError = false) {
+        const oldNotification = document.querySelector(".custom-notification");
+        if (oldNotification) oldNotification.remove();
+        const notification = document.createElement("div");
+        notification.className = `custom-notification ${isError ? "error" : "success"}`;
+        notification.innerHTML = `
+          <i class="fas ${isError ? "fa-exclamation-triangle" : "fa-check-circle"}"></i>
+          <span>${message}</span>
+        `;
+        document.body.appendChild(notification);
+        setTimeout(() => notification.classList.add("show"), 10);
+        setTimeout(() => {
+          notification.classList.remove("show");
+          setTimeout(() => notification.remove(), 300);
+        }, 3000);
+      }
+
+      function openProblemModal(device) {
+        currentDevice = device;
+        const modal = document.getElementById("problemModal");
+        const modalTitle = document.getElementById("modalDeviceTitle");
+        modalTitle.textContent = `${device} — выберите проблему`;
+        const container = document.getElementById("problemsListContainer");
+        const problems = problemsDB[device] || problemsDB["iPhone"];
+        container.innerHTML = "";
+        problems.forEach((problem) => {
+          const div = document.createElement("div");
+          div.className = "problem-item";
+          div.innerHTML = `
+            <span class="problem-name">${problem.name}</span>
+            <span class="problem-price">${problem.price}</span>
+          `;
+          div.addEventListener("click", () => {
+            fillFormAndRedirect(device, problem);
+          });
+          container.appendChild(div);
+        });
+        modal.style.display = "flex";
+      }
+
+      function closeProblemModal() {
+        document.getElementById("problemModal").style.display = "none";
+      }
+
+      function fillFormAndRedirect(device, problem) {
+        const deviceInput = document.getElementById("formDevice");
+        const messageInput = document.getElementById("formMessage");
+        if (deviceInput) deviceInput.value = device;
+        if (messageInput)
+          messageInput.value = `${problem.name} (ориентировочная цена: ${problem.price})`;
+        closeProblemModal();
+        const formSection = document.getElementById("callback");
+        if (formSection) {
+          formSection.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (deviceInput) {
+            deviceInput.style.transition = "0.3s";
+            deviceInput.style.backgroundColor = "#f0f0f0";
+            setTimeout(() => (deviceInput.style.backgroundColor = ""), 500);
+          }
+          if (messageInput) {
+            messageInput.style.transition = "0.3s";
+            messageInput.style.backgroundColor = "#f0f0f0";
+            setTimeout(() => (messageInput.style.backgroundColor = ""), 500);
+          }
+        }
+      }
+
+      function sendDataToTelegram(formData) {
+        const botToken = "8923655847:AAHG6C-9Bu5B_bOXDDW6TTTf7QnkmveNXGc";
+        const chatId = "872109455";
+        const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const message = `
+📩 *Новая заявка с сайта!*
+
+📱 *Устройство:* ${formData.device || "Не указано"}
+⚙️ *Проблема:* ${formData.problem || "Не указана"}
+
+👤 *Имя:* ${formData.name || "Не указано"}
+📞 *Телефон:* ${formData.phone}
+
+📝 *Подробности:* ${formData.message || "Не указаны"}
+        `;
+        return fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: "Markdown",
+          }),
+        });
+      }
+
+      document.querySelectorAll(".device-card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          const device = card.getAttribute("data-device");
+          if (device) openProblemModal(device);
+        });
+      });
+
+      document
+        .querySelectorAll(".footer-col a[data-device]")
+        .forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const device = link.getAttribute("data-device");
+            if (device) openProblemModal(device);
+          });
+        });
+
+      const phoneInputField = document.getElementById("formPhone");
+      if (phoneInputField) {
+        phoneInputField.addEventListener("input", function (e) {
+          formatPhoneInput(this);
+        });
+        phoneInputField.addEventListener("blur", function (e) {
+          const validation = validatePhoneNumber(this.value);
+          if (validation.valid) this.value = validation.formatted;
+        });
+      }
+
+      const form = document.getElementById("mainForm");
+      const modal = document.getElementById("thanksModal");
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("formName").value.trim();
+          const phone = document.getElementById("formPhone").value.trim();
+          const device = document.getElementById("formDevice").value;
+          const problem = document.getElementById("formMessage").value;
+
+          if (!name) {
+            showNotification("Пожалуйста, укажите ваше имя", true);
+            document.getElementById("formName").focus();
+            return;
+          }
+          if (!phone) {
+            showNotification("Пожалуйста, укажите номер телефона", true);
+            document.getElementById("formPhone").focus();
+            return;
+          }
+          const phoneValidation = validatePhoneNumber(phone);
+          if (!phoneValidation.valid) {
+            showNotification(
+              "Введите корректный номер телефона (пример: +375291231212 или 80291231212)",
+              true,
+            );
+            document.getElementById("formPhone").focus();
+            return;
+          }
+
+          const formDataToSend = {
+            name: name,
+            phone: phoneValidation.formatted,
+            device: device || "Не указано",
+            problem: problem || "Не указана",
+            message: problem || "Не указана",
+          };
+
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton.innerText;
+          submitButton.innerText = "Отправляю...";
+          submitButton.disabled = true;
+
+          sendDataToTelegram(formDataToSend)
+            .then((response) => {
+              if (response.ok) {
+                if (modal) modal.style.display = "flex";
+                form.reset();
+              } else {
+                showNotification(
+                  "Ошибка при отправке. Попробуйте позже или позвоните нам.",
+                  true,
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Ошибка:", error);
+              showNotification(
+                "Не удалось отправить заявку. Проверьте соединение или позвоните нам.",
+                true,
+              );
+            })
+            .finally(() => {
+              submitButton.innerText = originalButtonText;
+              submitButton.disabled = false;
+            });
+        });
+      }
+
+      function closeModal() {
+        if (modal) modal.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        if (event.target === modal) closeModal();
+        const problemModalElem = document.getElementById("problemModal");
+        if (event.target === problemModalElem) closeProblemModal();
+      };
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href === "#" || href === "") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
